@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دلع كرشك | ألذ المأكولات الشرقية</title>
+    <link rel="stylesheet" href="orderstyle.css" />
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- القائمة العلوية -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>دلع كرشك</h1>
+          <p>ألذ المأكولات الشرقية</p>
+        </div>
+        <nav aria-label="القائمة الرئيسية">
+          <ul>
+            <li><a href="index.html" >الرئيسية</a></li>
+            <li><a href="menu.html">قائمة الطعام</a></li>
+            <li><a href="offers.html">عروضنا</a></li>
+            <li><a href="index.html#about">عن المطعم</a></li>
+            <li><a href="index.html#contact">اتصل بنا</a></li>
+          </ul>
+        </nav>
+        <div class="cta">
+          <a href="#" class="order-now">اطلب الآن</a>
+        </div>
+      </div>
+    </header>
+    <section class="order-form">
+      <div class="container">
+        <h2>نموذج الطلب</h2>
+        <div class="form-container">
+          <form>
+            <div class="form-group">
+              <label for="name">الاسم:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">رقم الهاتف:</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="address">العنوان:</label>
+              <input type="text" id="address" name="address" required />
+            </div>
+            <fieldset>
+              <legend>فطار</legend>
+              <select multiple id="breakfast" name="order_breakfast[]">
+                <optgroup label="فطار شرقي">
+                  <option value="فول بالزيت الحار">فول بالزيت الحار</option>
+                  <option value="فول بالطحينة">فول بالطحينة</option>
+                  <option value="بطاطس">بطاطس</option>
+                  <option value="طعميه">طعميه</option>
+                  <option value="بتنجان">بتنجان</option>
+                </optgroup>
+                <optgroup label="سندوتشات الفطار">
+                  <option value="سندوتش فول">سندوتش فول</option>
+                  <option value="سندوتش طعميه">سندوتش طعميه</option>
+                  <option value="سندوتش مسقعة">سندوتش مسقعة</option>
+                  <option value="سندوتش جمبري">سندوتش جمبري</option>
+                  <option value="سندوتش جبنة">سندوتش جبنة</option>
+                  <option value="فول بالبيض">فول بالبيض</option>
+                </optgroup>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>غداء</legend>
+              <select multiple id="lunch" name="order_lunch[]">
+                <optgroup label="مشويات">
+                  <option value="كباب وكفتة">كباب وكفتة</option>
+                  <option value="شيش طاووق">شيش طاووق</option>
+                  <option value="ريش ضاني">ريش ضاني</option>
+                  <option value="نصف فرخة مشوية">نصف فرخة مشوية</option>
+                </optgroup>
+                <optgroup label="طواجن">
+                  <option value="طاجن بامية">طاجن بامية</option>
+                  <option value="طاجن عكاوي">طاجن عكاوي</option>
+                  <option value="طاجن مسقعة">طاجن مسقعة</option>
+                  <option value="طاجن بطاطس باللحمة">طاجن بطاطس باللحمة</option>
+                </optgroup>
+                <optgroup label="باستا">
+                  <option value="مكرونة بشاميل">مكرونة بشاميل</option>
+                  <option value="مكرونة بالسجق">مكرونة بالسجق</option>
+                  <option value="مكرونة نجرسكو">مكرونة نجرسكو</option>
+                  <option value="مكرونة بالكبدة">مكرونة بالكبدة</option>
+                </optgroup>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>عشاء</legend>
+              <select multiple id="dinner" name="order_dinner[]">
+                <optgroup label="عشاء">
+                  <option value="شاورما فراخ">شاورما فراخ</option>
+                  <option value="شاورما لحمة">شاورما لحمة</option>
+                  <option value="برجر">برجر</option>
+                  <option value="كبدة اسكندراني">كبدة اسكندراني</option>
+                  <option value="سجق بلدي">سجق بلدي</option>
+                  <option value="تشيكن بانيه">تشيكن بانيه</option>
+                </optgroup>
+                <optgroup label="حلو">
+                  <option value="مولتن كيك">مولتن كيك</option>
+                  <option value="تشيز كيك">تشيز كيك</option>
+                  <option value="براونيز">براونيز</option>
+                  <option value="رز بلبن">رز بلبن</option>
+                  <option value="وافل">وافل</option>
+                  <option value="قشطوطة">قشطوطة</option>
+                </optgroup>
+              </select>
+            </fieldset>
+            <button type="button" onclick="alert('تم إرسال الطلب!')">تأكيد الطلب</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- تذييل الصفحة -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>دلع كرشك</h2>
+            <p>ألذ المأكولات الشرقية</p>
+          </div>
+          <div class="footer-links">
+            <h3>روابط سريعة</h3>
+            <ul>
+              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="menu.html">قائمة الطعام</a></li>
+              <li><a href="offers.html">عروضنا</a></li>
+              <li><a href="index.html#about">عن المطعم</a></li>
+              <li><a href="index.html#contact">اتصل بنا</a></li>
+            </ul>
+          </div>
+          <div class="footer-hours">
+            <h3>ساعات العمل</h3>
+            <ul>
+              <li><span>السبت - الخميس:</span> 10:00 صباحاً - 11:00 مساءً</li>
+              <li><span>الجمعة:</span> 1:00 ظهراً - 11:00 مساءً</li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>النشرة البريدية</h3>
+            <p>اشترك في نشرتنا البريدية للحصول على أحدث العروض والتخفيضات</p>
+            <form>
+              <input type="email" placeholder="أدخل بريدك الإلكتروني" required />
+              <button type="submit">اشتراك</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 مطعم دلع كرشك. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

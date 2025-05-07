@@ -1,0 +1,410 @@
+/* إعدادات عامة */
+:root {
+  --primary-color: #ff6b35;
+  --secondary-color: #2e2836;
+  --accent-color: #f7c59f;
+  --text-color: #333;
+  --light-color: #fff;
+  --light-gray: #f9f9f9;
+  --dark-gray: #666;
+  --border-color: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tajawal', Arial, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  direction: rtl;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* الهيدر */
+header {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* اللوجو */
+.logo h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+.logo p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* القوائم */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary-color);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/* زر الطلب */
+.order-now {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.order-now:hover {
+  background-color: var(--secondary-color);
+}
+
+/* قسم الإفطار */
+.breakfast-section {
+  background-image: url('fool.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+  color: var(--light-color);
+}
+
+.breakfast-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #ffcc70;
+}
+
+/* محتوى الإفطار */
+.breakfast-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.column span {
+  color: var(--primary-color);
+}
+
+.column h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #ffd580;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column ul li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 5px;
+}
+
+/* قسم المنيو */
+.menu-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('اكل مصري.webp');
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  padding: 60px 0;
+  position: relative;
+  color: var(--light-color);
+}
+
+.menu-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.menu-column {
+  display: block;
+}
+
+.menu-column h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #ffcc70;
+  border-bottom: 2px dashed var(--primary-color);
+  padding-bottom: 5px;
+}
+
+.menu-column ul {
+  list-style: none;
+  color: #ffcc70;
+  padding: 0;
+}
+
+.menu-column li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: bold;
+}
+
+/* كروت الطعام المميزة */
+.featured-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  font-size: 36px;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.food-item {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+}
+
+.food-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-info h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.food-info p {
+  color: var(--dark-gray);
+  font-size: 18px;
+  margin: 10px 0;
+  flex-grow: 1;
+}
+
+.food-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.add-to-cart {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart:hover {
+  background-color: #c2185b;
+}
+
+.add-to-cart i {
+  margin-left: 5px;
+}
+
+/* تذييل الصفحة */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  padding: 70px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-logo h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  color: var(--light-color);
+  opacity: 0.7;
+}
+
+.footer-links h3,
+.footer-hours h3,
+.footer-newsletter h3 {
+  color: var(--light-color);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.footer-links ul,
+.footer-hours ul {
+  list-style: none;
+}
+
+.footer-links ul li,
+.footer-hours ul li {
+  margin-bottom: 15px;
+}
+
+.footer-links ul li a {
+  color: var(--light-color);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.footer-hours ul li span {
+  font-weight: 600;
+  margin-left: 5px;
+  color: var(--primary-color);
+}
+
+.footer-newsletter p {
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.footer-newsletter form {
+  display: flex;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-family: "Tajawal", sans-serif;
+}
+
+.footer-newsletter button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 12px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  opacity: 0.7;
+}
